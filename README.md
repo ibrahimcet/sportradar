@@ -25,7 +25,7 @@ Or run the application with your preferred IDE, port must be added in VM options
 -Dserver.port=9090
 ```
 
-##Test Coverage
+## Test Coverage
 I added Jacoco plugin for the test coverage.
 Open terminal located at bottom left in intellij and run this command 
 -mvn clean install
@@ -35,5 +35,5 @@ Total coverage is %87 right now.
 ## Swagger UI
 Swagger UI is accessible at http://localhost:9090/swagger-ui/
 
-##Postman Collections
+## Postman Collections
 You can find my postman collections under the resources->postman folder. You can easily import and test endpoints.
