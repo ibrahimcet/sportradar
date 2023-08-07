@@ -1,0 +1,115 @@
+{
+	"info": {
+		"_postman_id": "8c05c9d8-aa2c-4da6-916b-f962aa32b7b3",
+		"name": "sportradar",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "start match",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"homeTeam\" : \"Rosenborg BK\",\r\n    \"awayTeam\" : \"Viking FK\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/api/match",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"match"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateScore",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/merge-patch+json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"awayScore\" :4 ,\r\n    \"homeScore\" : 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/api/match/64d114bdba9ecb25a2a4d2f1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"match",
+						"64d114bdba9ecb25a2a4d2f1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "scoreboard list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9090/api/match",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"match"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "finish match",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9090/api/match/64d108a24536c25341be9d27",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"api",
+						"match",
+						"64d108a24536c25341be9d27"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
